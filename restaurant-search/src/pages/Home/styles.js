@@ -14,7 +14,7 @@ export const Container =  styled.aside`
     `;
 
 
-export const Search = styled.section`
+export const SearchInput = styled.section`
     display:flex;
     flex-direction: column;
     background-color: #ffffff;
@@ -22,11 +22,11 @@ export const Search = styled.section`
     padding: 1rem;
 `
 
-export const Logo = styled.img`
+export const RestaurantLogo = styled.img`
     margin-bottom: 15px;
 `
 
-export const Map = styled.div`
+export const GoogleMap = styled.div`
     background-color: red;
     width: 500px;
 `
