@@ -3,6 +3,7 @@ import { Container, SearchInput, RestaurantLogo, Wrapper, GoogleMap, CarouselTit
 import logo from "../../assets/logo.svg";
 import TextField, { Input } from "@material/react-text-field";
 import MaterialIcon from "@material/react-material-icon";
+import restaurantImage from '../../assets/restaurante-fake.png'
 import Slider from 'react-slick'
 const Home = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -33,13 +34,16 @@ const Home = () => {
         <CarouselTitle>Na sua Área</CarouselTitle>
         <Slider {...Carouselsettings}>
           <div>
-            <img src="#"/>
+            <img src={restaurantImage}/>
           </div>
           <div>
-            <img src="#"/>
+            <img src={restaurantImage}/>
           </div>
           <div>
-            <img src="#"/>
+            <img src={restaurantImage}/>
+          </div>
+          <div>
+            <img src={restaurantImage}/>
           </div>
         </Slider>
         </SearchInput>
