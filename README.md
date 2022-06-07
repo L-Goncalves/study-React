@@ -1,2 +1,3 @@
 # study-React
-React JS &amp; React Native apps made from studies.
+
+## This repository is made with the purpose of having many projects from studies.
