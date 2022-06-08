@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Slider from 'react-slick'
 
 export const Wrapper = styled.div`
     display: flex;
@@ -29,6 +30,11 @@ export const RestaurantLogo = styled.img`
 export const GoogleMap = styled.div`
     background-color: red;
     width: 500px;
+`
+export const Carousel = styled(Slider)`
+    .slick-slide{
+        margin-right: 16px;
+    }
 `
 
 export const CarouselTitle = styled.h1`
