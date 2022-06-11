@@ -18,5 +18,22 @@ export const Restaurant = styled.div`
 export const RestaurantInfo = styled.div`
     display: flex;
     flex-direction: column;
+`
 
+
+export const RestaurantTitle = styled.span`
+    font-family: ${(props) => props.theme.fonts.fontFamily};
+    color: ${(props) => props.theme.colors.text};
+    font-weight: 24px;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 10px;
+`;
+
+export const RestaurantAddress = styled.span`
+    font-family: ${(props) => props.theme.fonts.fontFamily};
+    color: ${(props) => props.theme.colors.text};
+    font-size: 17px;
+    line-height: 19px;
+    margin-bottom: 10px;
 `
