@@ -1,8 +1,8 @@
 import React from 'react';
 import { Restaurant, RestaurantInfo, RestaurantTitle, RestaurantAddress, RestaurantPicture } from './styles'
 import ReactStars from "react-rating-stars-component";
-const RestaurantCard = ({restaurant}) => (
-<Restaurant>
+const RestaurantCard = ({restaurant, onClick}) => (
+<Restaurant onClick={onClick}>
     <RestaurantInfo>
         <RestaurantTitle>
             Nome do Restaurante

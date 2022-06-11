@@ -35,14 +35,13 @@ const Home = () => {
           <CarouselTitle>Na sua Área</CarouselTitle>
           {SimpleSlider()}
         </SearchInput>
-        <RestaurantCard restaurant={restaurantImage}/>
+        <RestaurantCard onClick={ () => setModalOpen(true)} restaurant={restaurantImage}/>
       </Container>
-      <button onClick={ () => setModalOpen(true)}>Open Modal</button>
+      {/* <button onClick={ () => setModalOpen(true)}>Open Modal</button> */}
       <GoogleMap />
     
       <Modal open={modalOpened} onClose={() => setModalOpen(!modalOpened)}>
-        
-      </Modal>
+        </Modal>
     </Wrapper>
   );
 };
