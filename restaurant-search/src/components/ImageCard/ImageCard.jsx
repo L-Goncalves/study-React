@@ -11,7 +11,7 @@ export const Card = styled.div`
 `
 
 export const Title = styled.p`
-    font-family: ${(props) => props.theme};
+    font-family: ${(props) => props.theme.fonts.fontFamily};
     color: #fff;
     font-size: 1rem;
 `

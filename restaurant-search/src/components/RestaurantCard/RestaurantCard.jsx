@@ -1,7 +1,7 @@
 import React from 'react';
-import { Restaurant, RestaurantInfo, RestaurantTitle, RestaurantAddress } from './styles'
+import { Restaurant, RestaurantInfo, RestaurantTitle, RestaurantAddress, RestaurantPicture } from './styles'
 import ReactStars from "react-rating-stars-component";
-const RestaurantCard = () => (
+const RestaurantCard = ({restaurant}) => (
 <Restaurant>
     <RestaurantInfo>
         <RestaurantTitle>
@@ -9,7 +9,7 @@ const RestaurantCard = () => (
         </RestaurantTitle>
         <ReactStars
             count={5}
-            // onChange={ratingChanged}
+            value={4}
             size={24}
             isHalf={true}
             emptyIcon={<i className="far fa-star"></i>}
@@ -20,8 +20,9 @@ const RestaurantCard = () => (
         <RestaurantAddress>
              Avenida X do bairro y, 120
         </RestaurantAddress>
+       
     </RestaurantInfo>
-
+    <RestaurantPicture src={restaurant} alt={'Restaurante'}/>
 
 </Restaurant>)
 

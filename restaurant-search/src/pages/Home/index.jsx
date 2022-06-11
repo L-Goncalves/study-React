@@ -35,7 +35,7 @@ const Home = () => {
           <CarouselTitle>Na sua Área</CarouselTitle>
           {SimpleSlider()}
         </SearchInput>
-        <RestaurantCard />
+        <RestaurantCard restaurant={restaurantImage}/>
       </Container>
       <GoogleMap />
     </Wrapper>
