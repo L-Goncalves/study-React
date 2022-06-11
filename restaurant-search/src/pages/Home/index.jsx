@@ -13,7 +13,7 @@ import TextField, { Input } from "@material/react-text-field";
 import MaterialIcon from "@material/react-material-icon";
 import restaurantImage from "../../assets/restaurante-fake.png";
 import Slider from "react-slick";
-import {Card, RestaurantCard, Modal} from '../../components'
+import {Card, RestaurantCard, Modal, Map} from '../../components'
 const Home = () => {
   const [searchValue, setSearchValue] = useState("");
   const [modalOpened, setModalOpen] = useState(false);
@@ -38,7 +38,7 @@ const Home = () => {
         <RestaurantCard title={'Restaurante da esquina'} address={'Avenida Paulista, 2332 em São Paulo'} onClick={ () => setModalOpen(true)} restaurant={restaurantImage}/>
       </Container>
       {/* <button onClick={ () => setModalOpen(true)}>Open Modal</button> */}
-      <GoogleMap />
+      <Map />
     
       <Modal open={modalOpened} onClose={() => setModalOpen(!modalOpened)}>
         </Modal>
