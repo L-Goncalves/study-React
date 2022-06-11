@@ -13,7 +13,7 @@ import TextField, { Input } from "@material/react-text-field";
 import MaterialIcon from "@material/react-material-icon";
 import restaurantImage from "../../assets/restaurante-fake.png";
 import Slider from "react-slick";
-import {Card} from '../../components'
+import {Card, RestaurantCard} from '../../components'
 const Home = () => {
   const [searchValue, setSearchValue] = useState("");
 
@@ -35,6 +35,7 @@ const Home = () => {
           <CarouselTitle>Na sua Área</CarouselTitle>
           {SimpleSlider()}
         </SearchInput>
+        <RestaurantCard />
       </Container>
       <GoogleMap />
     </Wrapper>
@@ -51,7 +52,7 @@ function SimpleSlider() {
   };
   return (
     <Carousel {...settings}>
-        <Card photo={restaurantImage}/>
+        <Card title={'Nome sei la'} photo={restaurantImage}/>
           <Card photo={restaurantImage}/>
           <Card photo={restaurantImage}/>
           <Card photo={restaurantImage}/>

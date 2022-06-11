@@ -28,7 +28,7 @@ export const RestaurantLogo = styled.img`
 `
 
 export const GoogleMap = styled.div`
-    background-color: red;
+    background-color: transparent;
     width: 500px;
 `
 export const Carousel = styled(Slider)`
