@@ -35,7 +35,7 @@ const Home = () => {
           <CarouselTitle>Na sua Área</CarouselTitle>
           {SimpleSlider()}
         </SearchInput>
-        <RestaurantCard onClick={ () => setModalOpen(true)} restaurant={restaurantImage}/>
+        <RestaurantCard title={'Restaurante da esquina'} address={'Avenida Paulista, 2332 em São Paulo'} onClick={ () => setModalOpen(true)} restaurant={restaurantImage}/>
       </Container>
       {/* <button onClick={ () => setModalOpen(true)}>Open Modal</button> */}
       <GoogleMap />

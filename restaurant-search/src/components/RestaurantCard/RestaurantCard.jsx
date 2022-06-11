@@ -1,11 +1,11 @@
 import React from 'react';
 import { Restaurant, RestaurantInfo, RestaurantTitle, RestaurantAddress, RestaurantPicture } from './styles'
 import ReactStars from "react-rating-stars-component";
-const RestaurantCard = ({restaurant, onClick}) => (
+const RestaurantCard = ({restaurant, onClick, title, address}) => (
 <Restaurant onClick={onClick}>
     <RestaurantInfo>
         <RestaurantTitle>
-            Nome do Restaurante
+            {title}
         </RestaurantTitle>
         <ReactStars
             count={5}
@@ -18,7 +18,7 @@ const RestaurantCard = ({restaurant, onClick}) => (
             activeColor="#ffd700"
             />
         <RestaurantAddress>
-             Avenida X do bairro y, 120
+            {address}
         </RestaurantAddress>
        
     </RestaurantInfo>
