@@ -1,0 +1,25 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+restaurant-search/node_modules
+restaurant-search/.pnp
+
+restaurant-search/.pnp.js
+
+# testing
+restaurant-search/coverage
+
+# production
+restaurant-search/build
+
+# misc
+restaurant-search/.env
+restaurant-search/.DS_Store
+restaurant-search/.env.local
+restaurant-search/.env.development.local
+restaurant-search/.env.test.local
+restaurant-search/.env.production.local
+
+restaurant-search/npm-debug.log*
+restaurant-search/yarn-debug.log*
+restaurant-search/yarn-error.log*
