@@ -3,13 +3,22 @@ import { SIZES, assets, COLORS, SHADOWS, FONTS} from '../constants'
 
 export const NFTTitle = ({title, subtitle, titleSize, subtitleSize}) => {
     return (<View>
-        <Text>{title}</Text>
-
+        <Text style={{fontFamily: FONTS.semiBold, fontSize: titleSize, color: COLORS.primary}}>{title}</Text>
+        <Text style={{fontFamily: FONTS.regular, fontSize: subtitleSize, color: COLORS.primary}}>{title}</Text>
     </View>)
 }
 
-export const ETHPrice = () => {
-    return (<></>)
+export const EthPrice = ({ price}) => {
+    return (<View style={{flexDirection: 'row', alignItems: 'center', paddingHorizontal: 20}}>
+        <Image source={assets.eth}
+        resizeMode="contain"
+        style={{width: 20, height: 20, marginRight: 2}}
+        />
+        <Text style={{
+            fontSize: SIZES.font,
+            color: COLORS.primary
+        }}>{price}</Text>
+    </View>)
 }
 export const ImageCmp = ({imgUrl, index}) => {
     return (
