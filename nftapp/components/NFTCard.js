@@ -2,7 +2,7 @@ import {View, Text, Image} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { CircleButton } from '../components';
 import { COLORS, SIZES, SHADOWS, assets} from '../constants';
-import { SubInfo, EthPrice, NFTTitlem } from './SubInfo';
+import { SubInfo, EthPrice, NFTTitlem, NFTTitle } from './SubInfo';
 const NFTCard = ({data}) => {
     return(
         <View style={{
@@ -23,6 +23,14 @@ const NFTCard = ({data}) => {
             </View>
      
             <SubInfo/>
+            <View style={{width: "100%", padding: SIZES.font}}>
+                <NFTTitle 
+                title={data.name}
+                subtitle={data.creator}
+                titleSize={SIZES.large}
+                subtitleSize={SIZES.small}
+                />
+            </View>
             {/* <Text>{data.name}</Text> */}
         </View>
     )
