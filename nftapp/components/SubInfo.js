@@ -4,12 +4,12 @@ import { SIZES, assets, COLORS, SHADOWS, FONTS} from '../constants'
 export const NFTTitle = ({title, subtitle, titleSize, subtitleSize}) => {
     return (<View>
         <Text style={{fontFamily: FONTS.semiBold, fontSize: titleSize, color: COLORS.primary}}>{title}</Text>
-        <Text style={{fontFamily: FONTS.regular, fontSize: subtitleSize, color: COLORS.primary}}>{title}</Text>
+        <Text style={{fontFamily: FONTS.regular, fontSize: subtitleSize, color: COLORS.primary}}>{subtitle}</Text>
     </View>)
 }
 
 export const EthPrice = ({ price}) => {
-    return (<View style={{flexDirection: 'row', alignItems: 'center', paddingHorizontal: 20}}>
+    return (<View style={{flexDirection: 'row', alignItems: 'center'}}>
         <Image source={assets.eth}
         resizeMode="contain"
         style={{width: 20, height: 20, marginRight: 2}}
