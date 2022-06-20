@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import {NFTCard, HomeHeader, FocusedStatusBar} from '../components'
 import {COLORS, NFTData} from '../constants'
 
-const Home = () => {
+const Home = ({ navigation }) => {
 
     return (
     <SafeAreaView style={{flex: 1, marginBottom: -200}}>
@@ -13,7 +13,7 @@ const Home = () => {
             <View style={{flex: 1}}>
                 <View style={{zIndex: 0}}>
                     <FlatList data={NFTData}
-                        renderItem={({item}) => <NFTCard data={item}/>}
+                        renderItem={({item}) => <NFTCard navigation={navigation} data={item}/>}
                         keyExtractor={(item) => item.id}
                         showsVerticalScrollIndicator={false}
                         ListHeaderComponent={<HomeHeader/>}
