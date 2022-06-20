@@ -5,13 +5,21 @@ import {NFTCard, HomeHeader, FocusedStatusBar} from '../components'
 import {COLORS, NFTData} from '../constants'
 
 const Home = ({ navigation }) => {
-    const [nftData, setNFTData] = useState(NFTData);
+    const [NFTDATA, setNFTData] = useState(NFTData);
 
     const handleSearch = (value) => {
         if(!value.length) return setNFTData(NFTData);
+       
+        const filteredData = NFTDATA.filter((item) => item.name.toLowerCase().includes(value));
 
-        const filteredData = NFTDATA.filter((item) => item.name.toLowerCase().includes(value))
-        return filteredData;
+        console.log(value.length, filteredData)
+        if(value.length > 0 && filteredData.length == 0){
+            setNFTData(filteredData)
+        }
+        if(filteredData.length > 0){
+            setNFTData(filteredData)
+        }
+  
     }
 
 
@@ -21,11 +29,11 @@ const Home = ({ navigation }) => {
 
             <View style={{flex: 1}}>
                 <View style={{zIndex: 0}}>
-                    <FlatList data={NFTData}
+                    <FlatList data={NFTDATA}
                         renderItem={({item}) => <NFTCard navigation={navigation} data={item}/>}
                         keyExtractor={(item) => item.id}
                         showsVerticalScrollIndicator={false}
-                        ListHeaderComponent={<HomeHeader/>}
+                        ListHeaderComponent={<HomeHeader onSearch={handleSearch}/>}
                     />
                 </View>
 
