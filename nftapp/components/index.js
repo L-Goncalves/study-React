@@ -1,6 +1,8 @@
 import HomeHeader from "./HomeHeader";
 import FocusedStatusBar from "./FocusedStatusBar";
 import NFTCard from "./NFTCard";
-import { CircleButton } from "./Button";
+import { CircleButton, RectButton } from "./Button";
+import DetailsDesc from './DetailsDesc';
+import DetailsBid from './DetailsBid';
 
-export {FocusedStatusBar, NFTCard, HomeHeader, CircleButton}
+export {FocusedStatusBar, NFTCard, HomeHeader, CircleButton, DetailsDesc, DetailsBid, RectButton}
